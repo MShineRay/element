@@ -11,17 +11,18 @@ const LOAD_MAP = {
     return r => require.ensure([], () =>
       r(require(`./pages/en-US/${name}.vue`)),
     'en-US');
-  },
-  'es': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/es/${name}.vue`)),
-    'es');
-  },
-  'fr-FR': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/fr-FR/${name}.vue`)),
-    'fr-FR');
   }
+  // ,
+  // 'es': name => {
+  //   return r => require.ensure([], () =>
+  //     r(require(`./pages/es/${name}.vue`)),
+  //   'es');
+  // },
+  // 'fr-FR': name => {
+  //   return r => require.ensure([], () =>
+  //     r(require(`./pages/fr-FR/${name}.vue`)),
+  //   'fr-FR');
+  // }
 };
 
 const load = function(lang, path) {
@@ -38,17 +39,18 @@ const LOAD_DOCS_MAP = {
     return r => require.ensure([], () =>
       r(require(`./docs/en-US${path}.md`)),
     'en-US');
-  },
-  'es': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/es${path}.md`)),
-    'es');
-  },
-  'fr-FR': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/fr-FR${path}.md`)),
-    'fr-FR');
   }
+  // ,
+  // 'es': path => {
+  //   return r => require.ensure([], () =>
+  //     r(require(`./docs/es${path}.md`)),
+  //   'es');
+  // },
+  // 'fr-FR': path => {
+  //   return r => require.ensure([], () =>
+  //     r(require(`./docs/fr-FR${path}.md`)),
+  //   'fr-FR');
+  // }
 };
 
 const loadDocs = function(lang, path) {
